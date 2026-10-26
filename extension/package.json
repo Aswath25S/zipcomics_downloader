@@ -1,14 +1,35 @@
 {
   "name": "comic-archive-extension",
   "version": "1.0.0",
-  "description": "Create CBR and CBZ archives from an open comic reader tab.",
+  "description": "ZipComic download extension for Chrome and Brave. Save comic reader images as CBR or CBZ archives.",
   "license": "MIT",
   "private": true,
   "type": "module",
-  "engines": {"node": ">=24"},
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "check": "node --check background.js && node --check manager.mjs && node --check reader.mjs && node --check network.mjs && node --check archive.mjs && node --check ../scripts/package.mjs",
     "test": "node --test tests/*.test.mjs",
     "package": "node ../scripts/package.mjs"
+  },
+  "keywords": [
+    "zipcomic",
+    "zipcomics",
+    "zipcomic-download",
+    "zipcomics-downloader",
+    "comic-downloader",
+    "chrome-extension",
+    "brave-extension",
+    "cbr",
+    "cbz"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aswath25S/zipcomics_downloader.git"
+  },
+  "homepage": "https://github.com/Aswath25S/zipcomics_downloader#readme",
+  "bugs": {
+    "url": "https://github.com/Aswath25S/zipcomics_downloader/issues"
   }
 }

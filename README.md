@@ -1,9 +1,19 @@
-# Comic Archive Downloader
+# ZipComics Downloader — ZipComic download extension
 
-Save images from an open comic reader as a **CBR or CBZ archive**, directly in your
-browser. Review the pages, choose a format, and download one file for your comic
-reader. The extension runs locally and has no external service, npm dependencies,
-or build step.
+**ZipComics Downloader** is a free, open-source **ZipComic download** extension for
+Chrome and Brave. Save page images from an open ZipComic reader as a **CBR or CBZ
+archive**: review the images, choose a format, and download one file for your comic
+reader.
+
+The project is named `zipcomics_downloader` on GitHub. It is designed for ZipComic
+pages and compatible image-based comic readers, with all archive processing in
+your browser. Site access and reader layouts still need manual verification.
+There is no external service, npm dependency, or build step.
+
+[Download the source ZIP](https://github.com/Aswath25S/zipcomics_downloader/archive/refs/heads/main.zip)
+· [Installation](#installation)
+· [Download instructions](#how-to-download-comics-from-zipcomic)
+· [MIT license](LICENSE)
 
 ## Features
 
@@ -33,20 +43,22 @@ this build.
 
 ## Installation
 
-1. Download this repository using **Code → Download ZIP** and extract it, or clone
-   it with Git.
+1. [Download ZipComics Downloader](https://github.com/Aswath25S/zipcomics_downloader/archive/refs/heads/main.zip)
+   and extract it, or clone this repository with Git.
 2. Open `chrome://extensions` in Chrome or `brave://extensions` in Brave.
 3. Enable **Developer mode**.
 4. Click **Load unpacked** and select the repository's `extension` folder, which
    contains `manifest.json`.
-5. Pin **Comic Archive Downloader** from your browser's Extensions menu.
+5. Pin **Comic Archive Downloader** (the extension's installed name) from your
+   browser's Extensions menu.
 
 For a packaged release ZIP, extract it and select the extracted folder containing
 `manifest.json` instead. Installation is manual; there is no browser-store listing.
 
-## Download a comic
+## How to download comics from ZipComic
 
-1. Open an issue or reader page normally and complete any site verification.
+1. Open a ZipComic issue or compatible reader page in your normal browser and
+   complete any site verification.
 2. Scroll through the entire comic so the reader has loaded its images.
 3. Click the extension icon. A separate download tab opens and scans the reader.
 4. Review the previews and selected pages. Exclude adverts, thumbnails, and duplicates.
@@ -67,6 +79,28 @@ order. For the full user guide, see [extension/README.md](extension/README.md).
 
 Supported image signatures are JPEG, PNG, GIF, WebP, and AVIF. Whether a particular
 comic reader can display an image format depends on that reader.
+
+## ZipComic download FAQ
+
+### Can I download a ZipComic issue as CBR or CBZ?
+
+The extension collects the image URLs present in your open issue reader and
+packages the selected images into a CBR or CBZ archive. The reader and image URLs
+must be accessible in your browser session. Choose CBZ if your comic reader does
+not support RAR 5 archives.
+
+### Does ZipComics Downloader work in Brave?
+
+The extension targets Chrome and Brave desktop. In Brave, install it through
+`brave://extensions` using **Load unpacked**. No separate downloader application
+is needed. Automated tests use mocked browser APIs; verify behavior in your
+browser and with the reader you use.
+
+### Does it download every issue in a series?
+
+It downloads selected images from the current reader page. It does not crawl a
+series, follow issue links, or advance through pagination. Open and load each
+issue you want to save before scanning it.
 
 ## Troubleshooting and limits
 
@@ -122,8 +156,7 @@ while excluding tests, local environments, and repository metadata. Generated
 archives and local environments are ignored by Git.
 
 After editing, click **Reload** on the extension's browser card and reopen its
-download tab. CI is configured to run checks, tests, and packaging on Linux and
-macOS after this repository is hosted on GitHub. See
+download tab. GitHub Actions runs checks, tests, and packaging on Linux and macOS. See
 [CONTRIBUTING.md](CONTRIBUTING.md) for development and manual testing guidance.
 
 ## Contributing and support

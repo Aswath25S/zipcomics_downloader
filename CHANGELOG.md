@@ -11,6 +11,8 @@ manifest and `extension/package.json`.
 
 ### Added
 
+- ZipComics-focused project descriptions, download instructions, and search metadata.
+
 - Manifest V3 extension for collecting images from an open comic reader tab.
 - Reader image previews, page selection, and optional container selectors.
 - CBR (RAR 5 store) and CBZ (ZIP store) export with sequential page filenames.

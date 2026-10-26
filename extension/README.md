@@ -1,8 +1,9 @@
-# Comic Archive Downloader — user guide
+# ZipComics Downloader — Chrome and Brave user guide
 
-Create CBR or CBZ archives from images in the comic reader tab you already have
-open. The extension runs locally in Chrome or Brave desktop. It needs no Python,
-RAR installation, account, or build step.
+Use this ZipComic download extension to create CBR or CBZ archives from images
+in the comic reader tab you already have open. ZipComics Downloader runs locally
+in Chrome or Brave desktop. It needs no Python, RAR installation, account, or
+build step. Its installed browser name is **Comic Archive Downloader**.
 
 ## Install
 
