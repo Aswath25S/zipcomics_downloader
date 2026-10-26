@@ -1,7 +1,7 @@
 {
   "name": "comic-archive-extension",
   "version": "1.0.0",
-  "description": "ZipComic download extension for Chrome and Brave. Save comic reader images as CBR or CBZ archives.",
+  "description": "ZipComic download extension for Chrome and Brave. Save ZipComic issue images as CBR or CBZ archives.",
   "license": "MIT",
   "private": true,
   "type": "module",

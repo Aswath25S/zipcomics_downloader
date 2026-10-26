@@ -45,7 +45,7 @@ repository, enable its settings, or publish a release.
 
 The test suite validates JavaScript behavior and archive interoperability. CI
 uses Linux and macOS; it does not install the extension into a real browser or
-verify access to third-party sites.
+verify live access to ZipComic.
 
 ## Publish
 
@@ -54,5 +54,5 @@ generated versioned ZIP and release notes from the changelog. Tell users to
 extract the ZIP and select its folder through **Load unpacked**. Publishing to a
 browser store is a separate process and is not automated by this repository.
 
-Record known browser or reader-site limitations in the release notes. Open a new
-Unreleased section for future changes.
+Record known browser or ZipComic reader limitations in the release notes. Open
+a new Unreleased section for future changes.

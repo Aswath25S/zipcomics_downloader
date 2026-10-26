@@ -5,9 +5,8 @@ Chrome and Brave. Save page images from an open ZipComic reader as a **CBR or CB
 archive**: review the images, choose a format, and download one file for your comic
 reader.
 
-The project is named `zipcomics_downloader` on GitHub. It is designed for ZipComic
-pages and compatible image-based comic readers, with all archive processing in
-your browser. Site access and reader layouts still need manual verification.
+The project is named `zipcomics_downloader` on GitHub. It targets ZipComic
+(also referred to as ZipComics), with all archive processing in your browser.
 There is no external service, npm dependency, or build step.
 
 [Download the source ZIP](https://github.com/Aswath25S/zipcomics_downloader/archive/refs/heads/main.zip)
@@ -15,10 +14,16 @@ There is no external service, npm dependency, or build step.
 · [Download instructions](#how-to-download-comics-from-zipcomic)
 · [MIT license](LICENSE)
 
+## Supported source
+
+**ZipComic/ZipComics (`zipcomic.com`) is the only supported source for this
+project.** Other comic websites are outside the support scope. Downloading still
+depends on access to the ZipComic reader and its image hosts in your browser.
+
 ## Features
 
-- Collect page images from the reader you already have open.
-- Recognize common reader containers and lazy-loaded image attributes.
+- Collect page images from the ZipComic issue reader you already have open.
+- Detect reader containers and lazy-loaded image attributes on ZipComic pages.
 - Preview pages, exclude unwanted images, and preserve their order in the document.
 - Use a CSS container selector when automatic reader detection needs help.
 - Export genuine RAR 5 CBR files or ZIP-based CBZ files with padded page numbers.
@@ -37,7 +42,7 @@ The extension targets desktop Chromium browsers with Manifest V3 support:
 | Brave desktop | A current version based on Chromium 116 or newer. |
 
 Automated tests cover JavaScript behavior with mocked browser APIs and archive
-interoperability. End-to-end browser behavior and individual reader sites need
+interoperability. End-to-end browser behavior and live ZipComic access need
 manual verification. Firefox, Safari, and mobile browsers are not supported by
 this build.
 
@@ -57,8 +62,8 @@ For a packaged release ZIP, extract it and select the extracted folder containin
 
 ## How to download comics from ZipComic
 
-1. Open a ZipComic issue or compatible reader page in your normal browser and
-   complete any site verification.
+1. Open a ZipComic issue reader page in your normal browser and complete any
+   site verification.
 2. Scroll through the entire comic so the reader has loaded its images.
 3. Click the extension icon. A separate download tab opens and scans the reader.
 4. Review the previews and selected pages. Exclude adverts, thumbnails, and duplicates.
@@ -84,8 +89,8 @@ comic reader can display an image format depends on that reader.
 
 ### Can I download a ZipComic issue as CBR or CBZ?
 
-The extension collects the image URLs present in your open issue reader and
-packages the selected images into a CBR or CBZ archive. The reader and image URLs
+The extension collects the image URLs present in your open ZipComic issue reader
+and packages the selected images into a CBR or CBZ archive. The reader and image URLs
 must be accessible in your browser session. Choose CBZ if your comic reader does
 not support RAR 5 archives.
 
@@ -94,7 +99,7 @@ not support RAR 5 archives.
 The extension targets Chrome and Brave desktop. In Brave, install it through
 `brave://extensions` using **Load unpacked**. No separate downloader application
 is needed. Automated tests use mocked browser APIs; verify behavior in your
-browser and with the reader you use.
+browser and with the ZipComic issue you want to save.
 
 ### Does it download every issue in a series?
 

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Comic Archive Downloader",
-  "description": "Save images from the comic reader you have open as a CBR or CBZ archive.",
+  "description": "Download images from your open ZipComic issue reader as a CBR or CBZ archive.",
   "version": "1.0.0",
   "minimum_chrome_version": "116",
   "permissions": ["activeTab", "scripting", "downloads"],

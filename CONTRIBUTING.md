@@ -1,7 +1,7 @@
 # Contributing
 
-Bug reports, reader-layout fixes, documentation, and focused pull requests are
-welcome. Please follow the [code of conduct](CODE_OF_CONDUCT.md). For a security
+Bug reports, ZipComic reader-layout fixes, documentation, and focused pull
+requests are welcome. Please follow the [code of conduct](CODE_OF_CONDUCT.md). For a security
 issue, use the reporting process in [SECURITY.md](SECURITY.md).
 
 ## Development setup
@@ -42,7 +42,8 @@ The tests use mocked browser APIs and an independent archive reader; they do not
 replace browser testing. Reload the unpacked extension and reopen its download
 tab after editing files.
 
-For manual testing, use a reader you can access normally and images you may save:
+The project supports ZipComic/ZipComics only. For manual testing, use a ZipComic
+reader you can access normally and images you may save:
 
 - Scan a reader and confirm image order, previews, and selection.
 - Save CBR and CBZ archives, then open them in a compatible archive or comic reader.
@@ -61,8 +62,8 @@ steps for a bug, validation results, and screenshots when the interface changes.
 Keep unrelated changes in separate pull requests. Match the existing JavaScript
 style: ES modules, two-space indentation, semicolons, and double-quoted strings.
 
-For a reader-layout report, provide the selector or a minimal HTML example when
-possible. Remove cookies, authorization headers, signed URLs, personal data, and
+For a ZipComic reader-layout report, provide the selector or a minimal HTML
+example when possible. Remove cookies, authorization headers, signed URLs, personal data, and
 comic image content from diagnostics and fixtures.
 
 ## Maintainer release steps

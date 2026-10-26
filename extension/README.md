@@ -1,9 +1,12 @@
 # ZipComics Downloader — Chrome and Brave user guide
 
 Use this ZipComic download extension to create CBR or CBZ archives from images
-in the comic reader tab you already have open. ZipComics Downloader runs locally
-in Chrome or Brave desktop. It needs no Python, RAR installation, account, or
+in the ZipComic issue reader tab you already have open. ZipComics Downloader runs
+locally in Chrome or Brave desktop. It needs no Python, RAR installation, account, or
 build step. Its installed browser name is **Comic Archive Downloader**.
+
+ZipComic/ZipComics (`zipcomic.com`) is the project's only supported source.
+Other comic websites are outside the support scope.
 
 ## Install
 
@@ -15,11 +18,12 @@ build step. Its installed browser name is **Comic Archive Downloader**.
 4. Pin **Comic Archive Downloader** in the browser's Extensions menu.
 
 Chrome 116+ or a Brave version based on Chromium 116+ is required. Browser and
-site behavior need manual verification; automated tests use mocked browser APIs.
+live ZipComic behavior need manual verification; automated tests use mocked
+browser APIs.
 
 ## Save an archive
 
-1. Open an issue reader normally and complete any site verification.
+1. Open a ZipComic issue reader normally and complete any site verification.
 2. Scroll through the comic so its images load.
 3. Click the extension icon to open the download tab.
 4. Check the previews and selection. Uncheck adverts, logos, or duplicates.
@@ -34,8 +38,8 @@ also needs to support the image format.
 
 ## Missing or unrelated images
 
-Load more pages in the reader, then click **Scan reader**. For unfamiliar layouts,
-all HTTP(S) image candidates are shown and large or comic-described images are
+Load more pages in the ZipComic reader, then click **Scan reader**. If its layout
+changes, all HTTP(S) image candidates are shown and large or comic-described images are
 selected as a starting point. Review the result carefully. You can enter a CSS
 selector for the reader container, such as `#readcomic`, and scan again. Scanning
 resets your selection.
