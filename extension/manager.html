@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comic Archive Downloader</title>
+  <link rel="stylesheet" href="manager.css">
+</head>
+<body>
+  <main>
+    <header>
+      <span class="eyebrow">COMIC ARCHIVE DOWNLOADER</span>
+      <h1>Your comic, ready to keep.</h1>
+      <p>Choose the pages from your open reader, then save one comic archive.</p>
+    </header>
+    <section class="card" aria-labelledby="reader-heading">
+      <h2 id="reader-heading">Find the pages</h2>
+      <p id="source">Connecting to the reader…</p>
+      <p class="hint">Complete verification and scroll through the comic in the original tab before scanning. Keep both tabs open until the file is saved.</p>
+      <div class="scan-controls">
+        <label for="selector">Reader selector <span class="optional">(optional)</span>
+          <input id="selector" placeholder="#readcomic" spellcheck="false">
+        </label>
+        <button id="scan" type="button">Scan reader</button>
+      </div>
+    </section>
+    <section class="card" aria-labelledby="archive-heading">
+      <h2 id="archive-heading">Save an archive</h2>
+      <div class="archive-controls">
+        <label for="name">Filename<input id="name" value="comic" maxlength="140"></label>
+        <label for="format">Format<select id="format"><option value="cbr">CBR (RAR 5)</option><option value="cbz">CBZ (ZIP)</option></select></label>
+        <button id="download" type="button" disabled>Download archive</button>
+        <button id="cancel" class="secondary" type="button" disabled>Cancel</button>
+      </div>
+      <p class="hint">Both formats preserve the original image files without recompressing them. No Python or RAR installation needed.</p>
+      <p id="permissions" class="hint"></p>
+      <div id="status" role="status" aria-live="polite">Open a comic reader and click the extension icon to begin.</div>
+      <progress id="progress" value="0" max="1" hidden></progress>
+    </section>
+    <section class="card" aria-labelledby="pages-heading">
+      <div class="pages-heading">
+        <h2 id="pages-heading">Review the pages <span id="count"></span></h2>
+        <div><button id="all" class="secondary" type="button">Select all</button> <button id="none" class="secondary" type="button">Select none</button></div>
+      </div>
+      <p id="selection-hint" class="hint">Pages are numbered in their order in the reader. Uncheck covers, adverts, or duplicate pages you don’t want.</p>
+      <div id="pages" class="pages"></div>
+    </section>
+    <footer>All processing happens in your browser. The extension does not bypass site verification or upload your images anywhere.</footer>
+  </main>
+  <script type="module" src="manager.mjs"></script>
+</body>
+</html>

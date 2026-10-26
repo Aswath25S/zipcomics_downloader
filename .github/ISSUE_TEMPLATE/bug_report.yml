@@ -1,0 +1,47 @@
+name: Bug report
+description: Report an image discovery, download, or archive problem.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For vulnerabilities, follow SECURITY.md instead of sharing exploit details here.
+        Remove cookies, signed URLs, personal data, and comic image content from attachments.
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Chrome 140 or Brave 1.x (Chromium version), macOS / Linux / Windows
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Extension version or commit
+      description: The version is shown on the extension card in your browser's extensions page.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include the reader layout or selector if relevant. A small sanitized HTML sample is useful.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and error message
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional context
+      description: Relevant browser settings, console errors, and sanitized screenshots, if available.

@@ -1,0 +1,14 @@
+{
+  "name": "comic-archive-extension",
+  "version": "1.0.0",
+  "description": "Create CBR and CBZ archives from an open comic reader tab.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=24"},
+  "scripts": {
+    "check": "node --check background.js && node --check manager.mjs && node --check reader.mjs && node --check network.mjs && node --check archive.mjs && node --check ../scripts/package.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "package": "node ../scripts/package.mjs"
+  }
+}

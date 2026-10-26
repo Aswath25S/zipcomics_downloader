@@ -1,0 +1,26 @@
+name: Feature request
+description: Suggest an improvement to discovery, archives, or the interface.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe a concrete situation and who it affects.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or workarounds
+  - type: textarea
+    id: permissions
+    attributes:
+      label: Permissions or compatibility considerations
+      description: Mention new site access, dependencies, or browser-specific behavior if relevant.
