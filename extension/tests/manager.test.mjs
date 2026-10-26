@@ -31,7 +31,7 @@ async function manager(scenario = {}) {
   globalThis.chrome = {
     permissions: {request: async (request) => { calls.requests.push(request); return scenario.permission !== false; }},
     scripting: {executeScript: async ({func}) => {
-      if (func.name === "collectImages") return [{result: {title: "Test Comic", url: "https://example.com/issue",
+      if (func.name === "collectImages") return [{result: {title: "Read Online Test Comic", url: "https://example.com/issue",
         scoped: true, images: [{url: "https://cdn.example/1.png", selected: true, width: 600, height: 900}]}}];
       if (func.name === "fetchInReader") return [{result: {base64: scenario.invalidImage ? btoa("Access denied") : png}}];
       return [{result: scenario.navigated ? "https://example.com/other" : "https://example.com/issue"}];

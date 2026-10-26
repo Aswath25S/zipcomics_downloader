@@ -5,6 +5,10 @@ manifest and `extension/package.json`.
 
 ## Unreleased
 
+### Fixed
+
+- Remove the leading "Read Online " prefix from downloaded archive filenames.
+
 ### Added
 
 - Manifest V3 extension for collecting images from an open comic reader tab.

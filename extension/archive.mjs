@@ -127,5 +127,5 @@ export function imageExtension(data) {
 }
 
 export function safeName(title) {
-  return title.replace(/[<>:"/\\|?*\x00-\x1f]/g, "_").trim().replace(/[. ]+$/, "").slice(0, 140) || "comic";
+  return title.replace(/^\s*read\s+online\s+/i, "").replace(/[<>:"/\\|?*\x00-\x1f]/g, "_").trim().replace(/[. ]+$/, "").slice(0, 140) || "comic";
 }
